@@ -29,21 +29,33 @@ body {
     line-height: 1.7;
     letter-spacing: 0.03em;
 }
+/* Utilites */
 .list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.link:hover,
-.link:focus {
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: 2px solid tomato;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
     color: var(--accent-text-color);
 }
-.link {
-    text-decoration: none;
-}
-.header-link.current {
+.contact-nav .link:hover,
+.contact-nav .link:focus {
     color: var(--accent-text-color);
 }
+.site-nav .link.current {
+    color: var(--accent-text-color);
+}
+.link,
 .card {
     text-decoration: none;
 }
@@ -51,20 +63,26 @@ body {
 .footer-link:focus {
     color: var(--primary-bkgd-color);
 }
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1170px;
-    /* padding-left: 20px;
-    padding-right: 20px; */
-    outline:2px solid tomato;
-}
+
 /* HEADER */
 .page-header {
     background-color: whitesmoke;
 }
+/* main-nav */
+.main-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 93px;
+}
+.nav-section {
+    display: flex;
+    align-items: center;
+}
+/* logo */
 .logo {
+    /* outline: 1px solid tomato; */
     color: var(--accent-text-color);
+
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -72,19 +90,45 @@ body {
     letter-spacing: 0.03em;
     text-decoration: none;
 }
-.studio-header{
+.studio-header {
     color: var(--logo-text-color);
 }
-.header-link,
-.header-contacts {
+/* site-nav */
+.site-nav,
+.contact-nav{
+    display: flex;
+}
+.site-nav .item,
+.contact-nav .item {
+    /* outline: 1px solid tomato; */
+}
+.site-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+.site-nav .link,
+.contact-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--secondary-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-.header-contacts {
+.site-nav {
+    margin-left: 93px;
+}
+/* contact-nav */
+.contact-nav .contacts {
     color: var(--primary-text-color);
+}
+.contact-nav .item + .item {
+    margin-left: 50px;
+}
+.contact-nav {
+    margin-left: auto;
 }
 /* HERO */
 .hero {
@@ -92,32 +136,34 @@ body {
     text-align: center;
 }
 .hero-title {
+    outline: 2px solid tomato;
+    margin-top: 0px;
+    margin-bottom: 30px;
+
+    color: var(--primary-bkgd-color);
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-
-    color: var(--primary-bkgd-color);
-    outline: 2px solid tomato;
-    margin-top: 0px;
-    margin-bottom: 30px;
 }
 .button {
-    font-family: inherit;
+    border-radius: 4px;
+    padding: 10px 32px;
+    min-width: 216px;
+    height: 50px;
+
     background-color: var(--accent-text-color);
     color: var(--primary-bkgd-color);
+
+    font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.9;
     align-items: center;
     letter-spacing: 0.06em;
     cursor: pointer;
-
-    border-radius: 4px;
-    padding:10px 32px;
-    min-width: 216px;
-    height: 50px;
 }
 /* OUR FEATURES */
 .features {
@@ -136,14 +182,15 @@ body {
     overflow: hidden;
 }
 .features .title {
+    margin-top: 0;
+    margin-bottom: 10px;
+
     color: var(--secondary-text-color);
+
     font-size: 14px;
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
-
-    margin-top: 0;
-    margin-bottom: 10px;
 }
 .features .text {
     margin-top: 0;
@@ -156,6 +203,7 @@ body {
 .work-title,
 .team-title {
     color: var(--secondary-text-color);
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
@@ -178,22 +226,24 @@ body {
     margin-bottom: 50px;
 }
 .team .title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+
     color: var(--secondary-text-color);
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
-
-    margin-top: 30px;
-    margin-bottom: 10px;
 }
 .team .text {
+    margin-top: 0;
+    margin-bottom: 0;
+
     color: var(--primary-text-color);
+
     font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
-
-    margin-top: 0;
-    margin-bottom: 0;
 }
 /* FOOTER */
 .page-footer {
