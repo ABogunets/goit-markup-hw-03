@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
 :root {
     --primary-bkgd-color:#FFFFFF;
     --secondary-bkgd-color:#2F303A;
@@ -23,6 +31,8 @@ body {
 }
 .list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 .link:hover,
 .link:focus {
@@ -41,7 +51,18 @@ body {
 .footer-link:focus {
     color: var(--primary-bkgd-color);
 }
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1170px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    outline:2px solid tomato;
+}
 /* HEADER */
+.page-header {
+    background-color: whitesmoke;
+}
 .logo {
     color: var(--accent-text-color);
     font-family: 'Raleway', sans-serif;
@@ -71,12 +92,16 @@ body {
     text-align: center;
 }
 .hero-title {
-    color: var(--primary-bkgd-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    color: var(--primary-bkgd-color);
+    outline: 2px solid tomato;
+    margin-top: 0px;
+    margin-bottom: 30px;
 }
 .button {
     font-family: inherit;
@@ -88,8 +113,16 @@ body {
     align-items: center;
     letter-spacing: 0.06em;
     cursor: pointer;
+
+    border-radius: 4px;
+    padding:10px 32px;
+    min-width: 216px;
+    height: 50px;
 }
 /* OUR FEATURES */
+.features {
+    background-color: rgb(71, 255, 157);
+}
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -108,46 +141,91 @@ body {
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
+
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.features .text {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 /* WHAT WE ARE DOING (work)*/
-.main-title {
+.work {
+    background-color: rgba(255, 217, 0, 0.603);
+}
+.work-title,
+.team-title {
     color: var(--secondary-text-color);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
     text-align: center;
 }
+.work-title {
+    margin-top: 0;
+    margin-bottom: 46px
+}
+
 /* OUR TEAM */
 .team {
-    background-color: var(--team-bkgd-color);
+    /* background-color: var(--team-bkgd-color); */
+    background-color:yellowgreen;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.team-title {
+    margin-top: 0;
+    margin-bottom: 50px;
 }
 .team .title {
     color: var(--secondary-text-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
+
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 .team .text {
     color: var(--primary-text-color);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
+
+    margin-top: 0;
+    margin-bottom: 0;
 }
 /* FOOTER */
-.footer {
+.page-footer {
     background-color: var(--secondary-bkgd-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.footer {
+    margin-left: 215px;
 }
 .studio-footer {
     color: var(--primary-bkgd-color);
 }
 address {
 font-style: normal;
+background-color: darkkhaki;
+margin-top: 20px;
 }
-.contact-footer {
+.email-footer,
+.tel-footer,
+.address-footer {
     color: var(--contacts-footer-color);
     font-size: 14px;
     text-decoration: none;   
 }
+.address-footer {
+    margin-bottom: 9px;
+}
+.email-footer {
+    margin-bottom: 9px;
+}
+
 /* PORTFOLIO PAGE */
 
 /* buttons */
